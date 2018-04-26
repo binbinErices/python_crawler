@@ -149,7 +149,7 @@ strftime()函数是用来格式化一个日期、日期时间和时间的函数�
 |%x|采用本地合适日期表示|08/16/88(None);08/16/1988(en_US)| |
 |%%|输出百分号%|%| |
 
-##一个实例
+## 代码实例
 
 ```
 #!usr/bin/env python  
@@ -182,6 +182,71 @@ print (d4)
 2018-04-27 04:25:06
 2018-04-30 00:00:00
 '''
+
+def first_day_of_month():
+  '''
+  获取本月第一天
+  :return:
+  '''
+  return datetime.date.today() - datetime.timedelta(days=datetime.datetime.now().day - 1)
+def first_day_of_week():
+  '''
+  获取本周第一天
+  :return:
+  '''
+  return datetime.date.today() - datetime.timedelta(days=datetime.date.today().weekday())
+if __name__ == "__main__":
+  this_week = first_day_of_week()
+  last_week = this_week - datetime.timedelta(days=7)
+  this_month = first_day_of_month()
+  last_month = this_month - datetime.timedelta(days=(this_month - datetime.timedelta(days=1)).day)
+  print (this_week)
+  print (last_week)
+  print (this_month)
+  print (last_month)
+  """
+  datetime的功能强大
+  能支持0001年到9999年
+  """
+  """
+  当前时间
+  返回的是一个datetime类型
+  now方法有个参数tz，设置时区类型。如果没有和方法today的效果一样
+  """
+  now = datetime.datetime.now()
+  # UTC时间
+  datetime.datetime.utcnow()
+  attrs = [
+      ("year", "年"), ('month', "月"), ("day", "日"), ('hour', "小时"), ('minute', "分"), ('second', "秒"),
+      ('microsecond', "毫秒"), (
+          'min', "最小"), ('max', "最大"),
+  ]
+  for k, v in attrs:
+      "now.%s = %s #%s" % (k, getattr(now, k), v)
+
+  # 返回一个time结构
+  now.timetuple()
+
+  # 返回一个date类型
+  now.date()
+
+  # 返回一个time类型
+  now.time()
+
+  # 当前星期几。星期一是0，星期于是6,这里是方法不是属性
+  now.weekday()
+
+  # 当前星期几。星期一是1，星期于是7 这里是方法不是属性
+  now.isoweekday()
+ 
+  # 修改当前时间。比如修改成当月1号
+  now.replace(day=1)
+  past = datetime.datetime(2010, 11, 12, 13, 14, 15, 16)
+  
+  # 进行比较运算
+  # 返回的是timedelta类型
+  now - past
+
 
 ```
 
