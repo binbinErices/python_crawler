@@ -31,7 +31,7 @@ date类有三个参数,datetime.date(year,month,day)，返回year-month-day
 
 4.datetime.date.isoformat()：返回格式如YYYY-MM-DD
 
-5.datetime.date.isoweekday()：返回给定日期的星期（0-6），星期一=0，星期日=6
+5.datetime.date.isoweekday()：返回给定日期的星期（1-7），星期一=1，星期日=7; weekday() 星期一=0，星期日=6
 
 6.datetime.date.replace(year,month,day)：替换给定日期，但不改变原日期
 
@@ -233,13 +233,13 @@ if __name__ == "__main__":
   # 返回一个time类型
   now.time()
 
-  # 当前星期几。星期一是0，星期于是6,这里是方法不是属性
+  # 当前星期几，星期一是0，星期日是6,这里是方法不是属性
   now.weekday()
 
-  # 当前星期几。星期一是1，星期于是7 这里是方法不是属性
+  # 当前星期几，星期一是1，星期日是7 这里是方法不是属性
   now.isoweekday()
  
-  # 修改当前时间。比如修改成当月1号
+  # 修改当前时间，比如修改成当月1号
   now.replace(day=1)
   past = datetime.datetime(2010, 11, 12, 13, 14, 15, 16)
   
