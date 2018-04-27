@@ -1,9 +1,15 @@
-# ²ÉÓÃselenium+phantomjsÅÀÈ¡Ã¨ÑÛµçÓ°top100µÄÅÀ³æ  
+# é‡‡ç”¨selenium+phantomjsçˆ¬å–çŒ«çœ¼ç”µå½±top100çš„çˆ¬è™«  
 
-## Ïà¹ØÅäÖÃ  
-ÔËĞĞcrawlerÊ±£¬±ØĞëÒª°Ñtemplate.xlsxºÍphantomjs·ÅÔÚÏîÄ¿Ä¿Â¼ÏÂ¡£ÓÉÓÚ´úÂëÖĞÒÑ¾­Ğ´ËÀ·ÅÔÚµ±Ç°Ä¿Â¼ÏÂ£¬¶ÁÕß¿ÉÒÔ×ÔĞĞĞŞ¸Ä¡£  
+## ç›¸å…³é…ç½®  
+è¿è¡Œcrawleræ—¶ï¼Œå¿…é¡»è¦æŠŠtemplate.xlsxå’Œphantomjsæ”¾åœ¨é¡¹ç›®ç›®å½•ä¸‹ã€‚ç”±äºä»£ç ä¸­å·²ç»å†™æ­»æ”¾åœ¨å½“å‰ç›®å½•ä¸‹ï¼Œè¯»è€…å¯ä»¥è‡ªè¡Œä¿®æ”¹ã€‚  
 
-## ÔËĞĞ½ØÍ¼  
+## è¿è¡Œæˆªå›¾ Â 
+### æŠ“å–ç»“æœ  
+![image1](https://github.com/binbinErices/python_crawler/blob/master/img/content.png?raw=true) Â 
 
+---
+### logæ¨¡å—
+![image2](https://github.com/binbinErices/python_crawler/blob/master/img/log.png?raw=true)
 
-## crawler.pyÊÇ×î¿ªÊ¼Ğ´µÄ´úÂë£¬ÆäÖĞÖ»ÓĞÒµÎñµÄÊµÏÖ£¬Ã»ÓĞ½ø¶ÈÌõÏÔÊ¾£¬µçÓ°ÆÀ·Ö¸ñÊ½ÓĞbug£¬crawler_.py½øĞĞÁË¸Ä½øĞŞ¸ÄÁËÉÏÊöµÄbug.  
+## å…¶ä»–è¯´æ˜  
+crawler.pyæ˜¯æœ€å¼€å§‹å†™çš„ä»£ç ï¼Œå…¶ä¸­åªæœ‰ä¸šåŠ¡çš„å®ç°ï¼Œæ²¡æœ‰è¿›åº¦æ¡æ˜¾ç¤ºï¼Œç”µå½±è¯„åˆ†æ ¼å¼æœ‰bugï¼Œcrawler_.pyè¿›è¡Œäº†æ”¹è¿›ä¿®æ”¹äº†ä¸Šè¿°çš„bug. Â 
