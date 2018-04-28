@@ -20,7 +20,16 @@ Do the following in your virtualenv:
 ## 爬取文件展示  
 
 **51Job_bs_python.xls** Python职位信息表在工作简介这一栏存在bug  
-![python_img]()  
+![python_img](https://github.com/binbinErices/python_crawler/blob/master/img/51jobp1.png?raw=true)  
+
+---
+
+![python_img](https://github.com/binbinErices/python_crawler/blob/master/img/51jobp2.png?raw=true)  
 
 **51Job_bs_C++.xls** C++职位信息表修复了工作简介这一栏存在的bug  
-![C++_img]()  
+
+![python_img](https://github.com/binbinErices/python_crawler/blob/master/img/51jobc1.png?raw=true) 
+
+---
+
+![python_img](https://github.com/binbinErices/python_crawler/blob/master/img/51jobc2.png?raw=true)  
