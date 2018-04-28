@@ -14,4 +14,19 @@ The project is about spider and crawler
 |spider_youdao|利用爬虫接入有道翻译|  
 |douban|爬取豆瓣电影top250|  
 
+## 51Job_Crawler  
+![douban](![douban](https://github.com/binbinErices/python_crawler/blob/master/img/51jobc1.png?raw=true)
+
+## gitCrawler  
+
+## maoyan_Top100  
+![douban](![douban](https://github.com/binbinErices/python_crawler/blob/master/img/douban.png?raw=true)
+
+
+## douban  
+![douban](https://github.com/binbinErices/python_crawler/blob/master/img/douban.png?raw=true)
+
+
+
+
 ## 后续持续更新中ing  
