@@ -1,5 +1,12 @@
 # python_crawler
 
+```
+@author:binbinzhang
+@email:binbin_Erices@163.com
+@CSDN:https://blog.csdn.net/Erice_s
+
+```
+
 The project is about spider and crawler
 
 ## 1. 相关介绍  
