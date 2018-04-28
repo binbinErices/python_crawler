@@ -6,6 +6,7 @@
 @time: 2018/04/28 
 @email:binbin_Erices@163.com
 @function： 
+@version:1.0.0
 """
 import xlwt
 import requests
