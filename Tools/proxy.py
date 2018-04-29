@@ -43,4 +43,6 @@ if __name__=='__main__':
     ip_list = get_ip_list(url,headers=headers)
     proxies = get_random_ip(ip_list)
     print(proxies)
+    
+# result: {'http': 'http://1.196.135.179:61234'}
 
