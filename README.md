@@ -19,7 +19,8 @@ The project is about spider and crawler
 |img|存放项目相关的图片|  
 |selenium|介绍selenium库相关用法|  
 |spider_youdao|利用爬虫接入有道翻译|  
-|douban|爬取豆瓣电影top250|  
+|douban|爬取豆瓣电影top250|  
+|qq_Spider|爬取QQ空间动态并生成词云|  
 
 ## 2. 51Job_Crawler  
 ![51Job_Crawler](https://github.com/binbinErices/python_crawler/blob/master/img/51jobc1.png?raw=true)
@@ -31,8 +32,10 @@ The project is about spider and crawler
 
 
 ## 5. douban  
-![douban](https://github.com/binbinErices/python_crawler/blob/master/img/douban.png?raw=true)
+![douban](https://github.com/binbinErices/python_crawler/blob/master/img/douban.png?raw=true)  
 
+## 6. qq_Spider   
+![douban](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider3.png?raw=true)  
 
 
 
