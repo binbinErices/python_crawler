@@ -1,5 +1,13 @@
 # 基于selenium抓取空间好友动态并生成词云  
 
+## 运行结果  
+
+![好友词云图1](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider3.png?raw=true)  
+
+---
+ 
+![好友词云图2](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider4.png?raw=true)  
+
 ## 相关配置  
 
 ### 需要配置Anaconda   
@@ -94,8 +102,31 @@ conda update python
 trusted-host =  pypi.douban.com
 index-url = http://pypi.douban.com/simple
 ```
-**Anacanda其他相关问题** 
+**Anacanda其他相关问题**   
 [深入浅出Anacanda安装后的配置](https://blog.csdn.net/erice_s/article/details/80156334)    
 [Anaconda找包，安装包时，遇到PackageNotFoundError： ''Package missing in current channels"](https://blog.csdn.net/erice_s/article/details/80156191)  
 [python scipy安装失败的解决方法](https://blog.csdn.net/erice_s/article/details/80151977)  
+
+### 运行环境配置
+![env_setting](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider2.png?raw=true)  
+
+**selenium建议使用2.X版本  3.X版本会有warning**  
+
+```
+ UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+ warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+```
+
+### 文件目录配置  
+
+在项目文件中需要有Excel,Log,Pic,img文件夹  
+|文件夹名称|作用|备注|  
+|--------|-----|---|  
+|Excel|存放生产的xls文件||  
+|Log|存放空间动态的文件||  
+|Pic|存放生产的词云图||  
+|img|存放用来生产词云图的背景图||  
+
+![本机文件结构图](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider1.png?raw=true)
+
 
