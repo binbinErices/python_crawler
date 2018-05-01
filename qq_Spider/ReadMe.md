@@ -119,14 +119,18 @@ index-url = http://pypi.douban.com/simple
 
 ### 文件目录配置  
 
-在项目文件中需要有Excel,Log,Pic,img文件夹  
-|文件夹名称|作用|备注|  
-|--------|-----|---|  
-|Excel|存放生产的xls文件||  
-|Log|存放空间动态的文件||  
-|Pic|存放生产的词云图||  
-|img|存放用来生产词云图的背景图||  
+在项目文件中需要有Excel,Log,Pic,img文件夹  
 
-![本机文件结构图](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider1.png?raw=true)
+|文件夹名称|作用|备注|  
+|--------|-----|---|  
+|Excel|存放生产的xls文件| |  
+|Log|存放空间动态的文件| |  
+|Pic|存放生产的词云图| |  
+|img|存放用来生产词云图的背景图| |  
+
+![本机文件结构图](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider1.png?raw=true)  
+![本机文件结构图](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider5.png?raw=true)  
+
+**因为使用无界面浏览器所以需要把phantomjs放入到项目目录下**  
 
 
