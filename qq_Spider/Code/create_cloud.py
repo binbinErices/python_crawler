@@ -61,10 +61,10 @@ class Create_word():
         # read the mask / color image
         # taken from http://jirkavinse.deviantart.com/art/quot-Real-Life-quot-Alice-282261010
 
-        # 设置背景图片
+        # 随机设置背景图片
         # random.randint(1, 10)
-        # back_coloring = imread(path.join(d, "./img/{}.jpg".format(str(random.randint(1, 7)))))
-        back_coloring = imread(path.join(d, "./img/1.jpg"))
+        back_coloring = imread(path.join(d, "./img/{}.jpg".format(str(random.randint(1, 7)))))
+        # back_coloring = imread(path.join(d, "./img/1.jpg"))
 
         wc = WordCloud(font_path='C:/Windows/Fonts/STZHONGS.TTF',  # 设置字体
                        background_color="black",  # 背景颜色
