@@ -12,6 +12,27 @@ Anaconda 是一个可用于科学计算的 Python 发行版，支持 Linux、Mac
 **下载 Anaconda** 
 直接在[官网下载](https://www.anaconda.com/download/)安装包， 选择 Python3.6 的安装包进行下载，下载完成后直接安装，安装过程选择默认配置即可，大约需要2G多的磁盘空间。  
 
+**镜像源配置** 
+Anaconda安装成功之后，我们需要修改其包管理镜像为国内源。  
+
+[Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)  
+
+简单来说就是在cmd中分别运行这两个命令就好了。  
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  
+conda config --set show_channel_urls yes  
+```
+
+在 Windows 上，会随 Anaconda 一起安装一批应用程序：  
+
+Anaconda Navigator，它是用于管理环境和包的 GUI  
+Anaconda Prompt 终端，它可让你使用命令行界面来管理环境和包  
+Spyder，它是面向科学开发的 IDE  
+
+为了避免报错，我推荐在默认环境下更新所有的包。打开 Anaconda Prompt （或者 Mac 下的终端），键入：  
+> conda upgrade --all  
+
+
 **conda 工具介绍**  
 conda 是 Anaconda 下用于包管理和环境管理的工具，功能上类似 pip 和 vitualenv 的组合。安装成功后 conda 会默认加入到环境变量中，因此可直接在命令行窗口运行命令 conda  
 
@@ -66,15 +87,6 @@ conda update python
 
 ```
 
-**修改镜像地址**  
-Anaconda 的镜像地址默认在国外，用 conda 安装包的时候会很慢，目前可用的国内镜像源地址有清华大学的。修改 ~/.condarc (Linux/Mac) 或 C:\Users\当前用户名\.condarc (Windows) 配置：  
-```
-channels:
- - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
- - defaults
-show_channel_urls: true
-```
-
 如果使用conda安装包的时候还是很慢，那么可以考虑使用pip来安装，同样把 pip 的镜像源地址也改成国内的，豆瓣源速度比较快。修改 ~/.pip/pip.conf (Linux/Mac) 或 C:\Users\当前用户名\pip\pip.ini (Windows) 配置：  
 
 ```
@@ -82,5 +94,8 @@ show_channel_urls: true
 trusted-host =  pypi.douban.com
 index-url = http://pypi.douban.com/simple
 ```
-
+**Anacanda其他相关问题** 
+[深入浅出Anacanda安装后的配置](https://blog.csdn.net/erice_s/article/details/80156334)    
+[Anaconda找包，安装包时，遇到PackageNotFoundError： ''Package missing in current channels"](https://blog.csdn.net/erice_s/article/details/80156191)  
+[python scipy安装失败的解决方法](https://blog.csdn.net/erice_s/article/details/80151977)  
 
