@@ -8,7 +8,7 @@
  
 ![好友词云图2](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider4.png?raw=true)  
 
-## 相关配置  
+## 相关配置PyCharm+Anaconda  
 
 ### 需要配置Anaconda   
 
