@@ -1,30 +1,28 @@
-#!usr/bin/env python  
-# -*- coding: UTF-8 -*- 
-""" 
+#!usr/bin/env python
+# -*- coding: UTF-8 -*-
+"""
 @author:binbinzhang
-@file: qq_spider.py 
-@time: 2018/04/29 
+@file: qq_spider.py
+@time: 2018/04/29
 @email:binbin_Erices@163.com
-@function： 进行QQ空间动态爬取
+@function： 进行QQ空间动态爬取,并生成词云
+@version: 1.0.2
 """
 
-# coding:utf-8
+
 import time
 from selenium import webdriver
 from lxml import etree
 import xlwt
-
-
-
-# 这里一定要设置编码格式，防止后面写入文件时报错
+from create_cloud import Create_word    #导入create_cloud类中的Create_word方法
 
 
 class crawler():
 
     def __init__(self):
-        self.friend = ''  # 朋友的QQ号，朋友的空间要求允许你能访问
-        self.user = 'acount'  # 你的QQ号
-        self.pw = 'Password'  # 你的QQ密码
+        self.friend = ''      # 朋友的QQ号，朋友的空间要求允许你能访问
+        self.user = '1122123213'  # 你的QQ号
+        self.pw = '************'  # 你的QQ密码
 
         self.__count = 1
         self.__createSheet()
@@ -56,7 +54,8 @@ class crawler():
 
         for j in range(0, len(jobs)):
             self.__sheet.write(self.__count, j, jobs[j])
-        self.__f.save('QQZone'+self.friend+'.xls')
+        # self.__f.save('QQZone'+self.friend+'.xls')
+        self.__f.save("./Excel/QQZone{}.xls".format(self.friend))
         self.__count += 1
 
     def getData(self):
@@ -106,12 +105,14 @@ class crawler():
             divs = selector.xpath('//*[@id="msgList"]/li/div[3]')
 
             # 这里使用 a 表示内容可以连续不清空写入
-            with open('QQZone'+self.friend+'.log', 'a') as f:
+            filename = "./Log/QQZone{}.log".format(self.friend)
+            with open(filename, 'a') as f:
                 for div in divs:
                     qq_name = div.xpath('./div[2]/a/text()')
                     qq_content = div.xpath('./div[2]/pre/text()')
                     qq_time = div.xpath('./div[4]/div[1]/span/a/text()')
 
+                    # 需要设置编码格式不然可能会乱码或者程序异常终止
                     qq_name = ''.join(qq_name).encode('gbk', 'ignore').decode('gbk')
                     qq_content = ''.join(qq_content).encode('gbk', 'ignore').decode('gbk')
                     qq_time = ''.join(qq_time).encode('gbk', 'ignore').decode('gbk')
@@ -120,11 +121,11 @@ class crawler():
                     self.__saveDataToExcel(qq_name,qq_time,qq_content)
                     f.write(qq_content + "\n")
 
-                    # 当已经到了尾页，“下一页”这个按钮就没有id了，可以结束了
+            # 当已经到了尾页，“下一页”这个按钮就没有id了，可以结束了
             if self.driver.page_source.find('pager_next_' + str(next_num)) == -1:
                 break
 
-                # 找到“下一页”的按钮，因为下一页的按钮是动态变化的，这里需要动态记录一下
+            # 找到“下一页”的按钮，因为下一页的按钮是动态变化的，这里需要动态记录一下
             self.driver.find_element_by_id('pager_next_' + str(next_num)).click()
 
             # “下一页”的id
@@ -143,6 +144,9 @@ class crawler():
         self.friend = str(qq)
 
         self.getData()
+
+        # 调用create_cloud.py 中的 Create_word
+        Create_word().startcloud(self.friend)
 
 
 if __name__ == "__main__":
