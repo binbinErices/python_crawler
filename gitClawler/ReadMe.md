@@ -2,7 +2,7 @@
 
 ## 具体配置  
 
-![点击链接详情](https://github.com/binbinErices/python_crawler/tree/master/gitClawler/gitspider)  
+[点击链接详情](https://github.com/binbinErices/python_crawler/tree/master/gitClawler/gitspider)  
 
 ## 项目截图  
 
