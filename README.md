@@ -7,7 +7,9 @@
 
 ```
 
-The project is about spider and crawler
+## 后续持续更新中ing  
+
+**The project is about spider and crawler**  
 
 ## 1. 相关介绍  
 
@@ -23,12 +25,18 @@ The project is about spider and crawler
 |qq_Spider|爬取QQ空间动态并生成词云|  
 
 ## 2. 51Job_Crawler  
-![51Job_Crawler](https://github.com/binbinErices/python_crawler/blob/master/img/51jobc1.png?raw=true)
+![51Job_Crawler](https://github.com/binbinErices/python_crawler/raw/master/img/51jobc1.png?raw=true)  
 
-## 3. gitCrawler  
+[**详细信息请戳**](https://github.com/binbinErices/python_crawler/blob/master/51job_Crawler/ReadMe.md)
+
+## 3. gitCrawler  
+
+[**详细信息请戳**](https://github.com/binbinErices/python_crawler/blob/master/gitClawler/ReadMe.md)
 
 ## 4. maoyan_Top100  
 ![maoyan_Top100](https://github.com/binbinErices/python_crawler/blob/master/img/content.png?raw=true)
+
+[**详细信息请戳**](https://github.com/binbinErices/python_crawler/blob/master/maoyan_top100/ReadMe.md)  
 
 
 ## 5. douban  
@@ -37,6 +45,6 @@ The project is about spider and crawler
 ## 6. qq_Spider   
 ![douban](https://github.com/binbinErices/python_crawler/blob/master/img/qq_spider3.png?raw=true)  
 
+[**详细信息请戳**](https://github.com/binbinErices/python_crawler/blob/master/qq_Spider/ReadMe.md)  
 
 
-## 后续持续更新中ing  
