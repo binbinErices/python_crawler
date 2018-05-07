@@ -8,7 +8,14 @@
 @function： 
 """
 
-from openpyxl import load_workbook
+from openpyxl import load_workbook,Workbook
+
+# 修改多字节字符乱码的情况
+def gbk2utf(in_data , tag):
+    if 1 == tag:
+        return in_data.encode('gbk').decode('gbk')
+    elif 0 == tag:
+        return in_data.encode('gbk','ignore').decode('gbk').encode('utf8').decode("utf8")
 
 def anay():
     file = input("  请输入需要分析的文件名(输入q!退出程序)：\n")
@@ -21,11 +28,13 @@ def anay():
         print("文件名不存在，请输入正确的文件名称...")
         return
 
+
     '''
     namedict = {u"基础开发部":["张三","王五","李四"],
                 u"平台开发部":["张三","王五","李四"],
                 u"应用开发部": ["张三","王五","李四"],
                 u"产品部": ["张三","王五","李四"]
+                u"其他":["张三","王五","李四"]
                 }
     '''
     namedict = {
@@ -39,6 +48,7 @@ def anay():
         namedict[u"平台开发部"] = obj.readline()
         namedict[u"应用开发部"] = obj.readline()
         namedict[u"产品部"] = obj.readline()
+        namedict[u"其他"] = obj.readline()
         obj.close()
 
     sheet = wb["Sheet"]
@@ -56,28 +66,32 @@ def anay():
     s2 = ''
     s3 = ''
     s4 = ''
+    s5 = ''
 
     for pro, names in res.items():
         count = 0
 
         for name, num in names.items():
             count += num
-            if name in namedict[u'基础开发部']:
+            if gbk2utf(name,0) in namedict[u'基础开发部']:
                 s1 += "\t"+ name + u" 提交 " + str(num) + u"次\n"
-            if name in namedict[u'平台开发部']:
+            if gbk2utf(name,0) in namedict[u'平台开发部']:
                 s2 +="\t"+ name + u" 提交 " + str(num) + u"次\n"
-            if name in namedict[u'应用开发部']:
+            if gbk2utf(name,0) in namedict[u'应用开发部']:
                 s3 += "\t"+ name + u" 提交 " + str(num) + u"次\n"
-            if name in namedict[u'产品部']:
+            if gbk2utf(name,0) in namedict[u'产品部']:
                 s4 += "\t"+ name + u" 提交 " + str(num) + u"次\n"
+            if name in namedict[u'其他']:
+                s5 += "\t" + name + u" 提交 " + str(num) + u"次\n"
         all += count
 
     print(u'基础开发部:\n' + s1 )
     print(u'平台开发部:\n' + s2)
     print(u'应用开发部:\n' + s3)
     print(u'产品部:\n' + s4)
+    print(u'其他:\n' + s5)
 
-    record = u'基础开发部:\n' + s1+'\n'+u'平台开发部:\n' + s2+'\n'+u'应用开发部:\n' + s3+'\n'+u'产品部:\n' + s4+'\n'
+    record = u'基础开发部:\n' + s1+'\n'+u'平台开发部:\n' + s2+'\n'+u'应用开发部:\n' + s3+'\n'+u'产品部:\n' + s4+'\n'+u'其他：:\n' + s5+'\n'
 
     records.append(record)
 
@@ -86,7 +100,7 @@ def anay():
     print("*" * 40+" "*4+ str(all))
 
     #写入文件
-    with open("./gitResults.txt","a") as f:
+    with open("./gitResults.txt","a",encoding="utf8") as f:
         f.writelines(records)
 
     print("Analysis is ending...\n")
@@ -101,8 +115,5 @@ if __name__ == "__main__":
     print(" *********************************************************************************\n")
     while True:
         anay()
-
-
-
 
 
