@@ -145,6 +145,10 @@ print(np.unique(arr_5)) #[2 3 4 6 7]
 回归
 聚类
 时序分析
+
+启动：jupyter进行调试
+首先按装conda install jupyter
+进入文件目录 键入jupyter notebook
 '''
 
 
